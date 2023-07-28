@@ -24,10 +24,9 @@ object-oriented C++ programming project
  
  	--> Few things about the project:
 
-	>>>>>> things to ADD ( maybe in future) ----> To disconnect yourself from the account on 				timespan of 30 minutes
-					     ----> Hotel recensions 
-
-					     ----> ......
+	>>>>>> things to ADD ( maybe in future) ----> To disconnect automatically from the account in a  timespan of 30 minutes
+					        ----> Hotel recensions 
+					        ----> ......
 
      >>>>>> Tried learning some c++ and I thought this project would get maybe to beginner to medium  
 				level
@@ -43,7 +42,8 @@ object-oriented C++ programming project
 
 	---> Same works the delete system (with the files) and the forgot password function too. 
 
-
+     >>>>>> Made a function to generate an unique token based on your id/password and the current tine 
+      	    ---> id and password are crypter by the Caesar Cypher
 	 >>>> FEEL FREE TO INSPIRE IF YOU WANT
 	
 	
