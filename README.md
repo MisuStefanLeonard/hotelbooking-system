@@ -5,7 +5,7 @@ object-oriented C++ programming project
 	
 	---------------------------------------------------------------
 	
-	ALL RIGHTS RESERVED TO catterpillar03
+	ALL RIGHTS RESERVED TO MisuStefanLeonard
 	
 	
 	PERSONAL PROJECT
