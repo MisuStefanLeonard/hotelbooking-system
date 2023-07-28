@@ -1,30 +1,30 @@
 # hotelbooking-system
 object-oriented C++ programming project
 
+	
+	
+	---------------------------------------------------------------
+	
+	ALL RIGHTS RESERVED TO catterpillar03
+	
+	
+	PERSONAL PROJECT
+	
+	Friday 28 July 2023 , somewhere near dawn of the sun
+	
+	---------------------------------------------------------------
+
+	 FEW THINGS ABOUT ME : --- My name is Misu Stefan and I'm currently first year , now passed the second year at University of Bucharest  ,  Faculty of Mathematics And Informatics  , profile:  Computers And Technology of Information
 
 
----------------------------------------------------------------
+ 	--> PROJECT NAME: BOOKING HOTEL SYSTEM
 
-ALL RIGHTS RESERVED TO catterpillar03
-
-
-PERSONAL PROJECT
-
-Friday 28 July 2023 , somewhere near dawn of the sun
-
----------------------------------------------------------------
-
- FEW THINGS ABOUT ME : --- My name is Misu Stefan and I'm currently first year , now passed the second year at University of Bucharest  ,  Faculty of Mathematics And Informatics  , profile:  Computers And Technology of Information
-
-
- --> PROJECT NAME: BOOKING HOTEL SYSTEM
-
- --> Personal project I have been working on.Something simple , not very complicated. 
+ 	--> Personal project I have been working on.Something simple , not very complicated. 
      Made in object-oriented C++ programming.
  
- --> Few things about the project:
+ 	--> Few things about the project:
 
-     >>>>>> things to ADD ( maybe in future) ----> To disconnect yourself from the account on 									timespan of 30 minutes
+	>>>>>> things to ADD ( maybe in future) ----> To disconnect yourself from the account on 									timespan of 30 minutes
 					     ----> Hotel recensions 
 
 					     ----> ......
