@@ -32,6 +32,12 @@ Friday 28 July 2023 , somewhere near dawn of the sun
   
      >>>>>> Left comments everywhere where I encountered a problem or for testing purposes.
 
+     >>>>>> Tried to make a login system using files 
+		
+	--- > When you register yourself in the system your data gets written into the file. Then I 	used a map to link the id (which is unique) to the respective data of the customer.
+
+	---> Same works the delete system (with the files) and the forgot password function too. 
+
 
  >>>> FEEL FREE TO INSPIRE IF YOU WANT
 
