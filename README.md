@@ -24,7 +24,7 @@ object-oriented C++ programming project
  
  	--> Few things about the project:
 
-	>>>>>> things to ADD ( maybe in future) ----> To disconnect yourself from the account on 									timespan of 30 minutes
+	>>>>>> things to ADD ( maybe in future) ----> To disconnect yourself from the account on 				timespan of 30 minutes
 					     ----> Hotel recensions 
 
 					     ----> ......
