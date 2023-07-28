@@ -37,7 +37,8 @@ Friday 28 July 2023 , somewhere near dawn of the sun
 	--- > When you register yourself in the system your data gets written into the file. Then I 	used a map to link the id (which is unique) to the respective data of the customer.
 
 	---> Same works the delete system (with the files) and the forgot password function too. 
-
+	---> Made a function that generates an unique token on login 
+    		----> unique token composed of the id and password that are crypter by the Caesar Cypher combined with the current 		      time in a string
 
  >>>> FEEL FREE TO INSPIRE IF YOU WANT
 
