@@ -26,6 +26,7 @@ object-oriented C++ programming project
 
 	>>>>>> things to ADD ( maybe in future) ----> To disconnect automatically from the account in a  timespan of 30 minutes
 					        ----> Hotel recensions 
+	     					----> Showing hotels from the selected city based on the money input 
 					        ----> ......
 
      >>>>>> Tried learning some c++ and I thought this project would get maybe to beginner to medium  
