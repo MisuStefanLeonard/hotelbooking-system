@@ -23,8 +23,8 @@ int main()
     LinkBetweenAccountAndCustomer LBAAC;
     MENU_LOOPS menuLoops;
     std::unordered_map<string , Customer> customerMap = LBAAC.getMap();
+    accDB.ReadingFromRecordsIntoPassMap("records.txt");
     menuLoops.LOGIN_LOOP(m , accDB , LBAAC , EXIT_LOGIN_REGISTER_MENU , EXIT_PROG , "records.txt" , "LOGINinfo.txt" ,currID);
-    //std::unordered_map<string,string> passmap = accDB.getPass_Map();
     LBAAC.ReadFromFileIntoMap("userinfo.txt" , customerMap);
     menuLoops.CustomerAndHotel_MENU(m , sw , LBAAC , EXIT_PROG , currID , customerMap , customer , hotel , cities , "userinfo.txt");
     return 0;
