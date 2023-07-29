@@ -38,13 +38,22 @@ object-oriented C++ programming project
 
      >>>>>> Tried to make a login system using files 
 		
-	--- > When you register yourself in the system your data gets written into the file. Then I 	used a map to link the id (which is unique) to the respective data of the customer.
+	--- > When you register yourself in the system your data gets written into the file. Then I used a map to link the id (which is unique) to the respective data of the customer.
 
 	---> Same works the delete system (with the files) and the forgot password function too. 
 
-     >>>>>> Made a function to generate an unique token based on your id/password and the current tine 
-      	    ---> id and password are crypter by the Caesar Cypher
-	 >>>> FEEL FREE TO INSPIRE IF YOU WANT
+     >>>>>> Made a function to generate an unique token based on your id/password and the current time 
+      	    ---> id and password are crypter with Caesar Cypher
+     >>>>>> Fixed some bugs: ---- Forgot to read in the password map the data from the records file (now the id is unique )
+
+     			     ---- Fixed the modify customer data (it was reading the data twice in a row when you wanted to modify your 				  data), now it is reading only once.
+
+                             ---- Fixed a segmentation fault from the map iterator when you were removing your data.
+
+  
+  
+  
+  	>>>> FEEL FREE TO INSPIRE IF YOU WANT
 	
 	
 	 >>>> RUN WITH (in console) : 1) make
