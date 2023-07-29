@@ -43,7 +43,7 @@ object-oriented C++ programming project
 	---> Same works the delete system (with the files) and the forgot password function too. 
 
      >>>>>> Made a function to generate an unique token based on your id/password and the current time 
-      	    ---> id and password are crypter with Caesar Cypher
+      	    ---> id and password are crypted with Caesar Cypher
      >>>>>> Fixed some bugs: ---- Forgot to read in the password map the data from the records file (now the id is unique )
 
      			---- Fixed the modify customer data (it was reading the data twice in a row when you wanted to modify your data), now it is reading only once.
