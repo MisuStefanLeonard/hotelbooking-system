@@ -16,6 +16,7 @@
         while(filein >> userName >> name >> prename >> age >> sex >> money >> adult >> number >> CNP >> email){
 
             Customer customertemp;
+            customertemp.setID(userName);
             customertemp.setName(name);
             customertemp.setPrename(prename);
             customertemp.setAge(age);
