@@ -18,7 +18,7 @@ public:
     void Search_Customer(std::vector<Customer> &customer);
     void REMOVE_IN_VEC(std::vector<Customer>& custTemp, Customer& c_temp, string CNP_search);
     void Remove_Customer(LinkBetweenAccountAndCustomer LBAAC,std::vector<Customer> &customer , std::unordered_map<string , Customer>& map_of_customers , const char* FILENAME , string currID);
-    void Print_Customer(std::vector<Customer>& customer);
+    int Print_Customer(std::vector<Customer>& customer , std::unordered_map<string , Customer> customerMap , string currID);
     void Exit_Program(std::vector<Customer> &customer , std::vector<Hotel> &hotel);
     void Show_Hotels(std::vector<Hotel> & hotel);
     void Search_Hotel(std::vector<Hotel>& hotel);
@@ -32,7 +32,7 @@ public:
     bool* cardExpDate_flag , bool *cardCVV_flag , bool *checkMoney_flag  , bool* printInfo_flag , bool* checkingCardInfo_flag);
     void Print_Data(bool *printInfo_flag , CustomerCard *cardObj , int *p_Total_PAY ,
     std::vector<Hotel>::iterator h_selected , std::vector<Customer>& customer,
-    string *p_checkinDate ,string *p_checkOutDate , int *p_singleRooms , int *p_doubleRooms , int *p_tripleRooms , string currID);
+    string *p_checkinDate ,string *p_checkOutDate , int *p_singleRooms , int *p_doubleRooms , int *p_tripleRooms , string currID , std::unordered_map<string , Customer>& customerMap);
 
 };
 #endif
