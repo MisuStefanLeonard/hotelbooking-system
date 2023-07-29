@@ -81,7 +81,7 @@
                 }
                 case m.MODIFY_CIENT:
                 {
-                    LBAAC.AddFromMapToCustomerVec(customerMap , currID , customer);
+                    //LBAAC.AddFromMapToCustomerVec(customerMap , currID , customer); mistake here  !!!!
                     sw.Modify_Customer(LBAAC,customer , FILENAME , customerMap , currID);
                     LBAAC.ReadFromFileIntoMap(FILENAME , customerMap);
                     break;
@@ -100,7 +100,8 @@
                 }
                 case m.PRINT_CLIENT:
                 {
-                    sw.Print_Customer(customer);
+                    LBAAC.ReadFromFileIntoMap(FILENAME, customerMap);
+                    int returnVal = sw.Print_Customer(customer , customerMap , currID);
                     break;
                 }
                 case m.BOOK_HOTEL_FRONT:
@@ -172,7 +173,7 @@
                                             int ret4 = sw.Pay_Card(&Total_PAY , cardObj , &answer_flag , &input_flag , &cardName_flag ,
                                             &cardNumber_flag , &cardExpDate_flag , &cardCVV_flag , &checkMoney_flag , &printInfo_flag , &checkingCardInfo_flag);
                                             if(ret4 == 1){
-                                                sw.Print_Data(&printInfo_flag , cardObj , &Total_PAY , h_selected , customer , &checkin_date , &checkout_date , &single_rooms , &double_rooms , &triple_rooms , currID);
+                                                sw.Print_Data(&printInfo_flag , cardObj , &Total_PAY , h_selected , customer , &checkin_date , &checkout_date , &single_rooms , &double_rooms , &triple_rooms , currID , customerMap);
                                                 break;
                                             }
                                             else if(ret4 == 2)
@@ -194,7 +195,7 @@
                                             int ret4 = sw.Pay_Card(&Total_PAY , cardObj , &answer_flag , &input_flag , &cardName_flag ,
                                             &cardNumber_flag , &cardExpDate_flag , &cardCVV_flag , &checkMoney_flag , &printInfo_flag , &checkingCardInfo_flag);
                                             if(ret4 == 1){
-                                                sw.Print_Data(&printInfo_flag , cardObj , &Total_PAY , h_selected , customer , &checkin_date , &checkout_date , &single_rooms , &double_rooms , &triple_rooms , currID);
+                                                sw.Print_Data(&printInfo_flag , cardObj , &Total_PAY , h_selected , customer , &checkin_date , &checkout_date , &single_rooms , &double_rooms , &triple_rooms , currID , customerMap);
                                                 int money = cardObj->getCardMoney();
                                                 money = money + (Total_PAY*4)/5;
                                                 std::cout << "Left to pay: " << (4*Total_PAY)/5 << "$ in cash" << std::endl;
