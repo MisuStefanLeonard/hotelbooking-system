@@ -29,7 +29,7 @@
         fileout << c_temp.getEmail() << "\n";
         fileout << "\n\n\n";
         fileout.close();
-        std::cout << "Customed added succesfuly" << std::endl;
+        std::cout << "Customer added succesfuly" << std::endl;
     }
                                             //ADD CUSTOMER - END
                                             //----------------
@@ -124,6 +124,7 @@
                 customer.insert(customer.begin() + customer_position, c_temp);
                 customer_found = true;
                 std::cout << "Customer modified succesfuly" << std::endl;
+                break;
             }
         }
         if(customer_found == true){
@@ -221,9 +222,11 @@
 
                                                         // PRINT CURRENT CUSTOMER DATA - START
                                                         // ------------------------------
-    void SWITCH::Print_Customer(std::vector<Customer>& customer){
-        if(customer.empty() == true)
+    int SWITCH::Print_Customer(std::vector<Customer>& customer , std::unordered_map<string , Customer> customerMap , string currID){
+        if(customerMap.empty() == true){
             std::cout << "There are no customers in the list" << std::endl;
+            return 0;
+        }
         bool customer_found = false;
         auto c = customer.begin();
         string looking_for_customer;
@@ -231,7 +234,6 @@
         int count_CNP = 0;
         while(true){
         std::cin >> looking_for_customer;
-        //const regex valid_cnp()
         auto it = looking_for_customer.begin();
         for(it = looking_for_customer.begin();it != looking_for_customer.end() ; ++it){
             if(isdigit((*it)) == true){
@@ -243,15 +245,23 @@
         if(count_CNP == looking_for_customer.size())
             break;
         }
-        for(c=customer.begin() ; c!= customer.end() ; ++c){
-            if(looking_for_customer == c->getCNP()){
-                customer_found = true;
-                c->Print();
-                break;
-            }
+        Customer temp;
+        if(customerMap.find(currID) != customerMap.end()){
+            auto it = customerMap.find(currID);
+            temp = it->second;
+            customer_found = true;
         }
-        if(customer_found == false)
+        if(customer_found == true){
+            std::cout << "We found the customer you are looking for" << std::endl;
+            std::cout << "------------------------------------" << std::endl;
+            std::cout << "------------------------------------" << std::endl;
+            temp.Print();
+            return 1;
+        }
+        if(customer_found == false){
             std::cout << "There is no customer with the CNP: " << looking_for_customer << " that you want to print data about" << std::endl;
+            return 0;
+        }
     }
                                                         // PRINT CURRENT CUSTOMER DATA - END
                                                         // --------------------------------
@@ -375,14 +385,14 @@
             else
             std::cout << "Please enter a valid date format: ";
         }
-        string day_checkin = checkin_date.substr(0,1);
+        string day_checkin = checkin_date.substr(0,2);
         int int_day_checkin = std::stoi(day_checkin);
-        string day_checkout = checkout_date.substr(0,1);
+        string day_checkout = checkout_date.substr(0,2);
         int int_day_checkout = std::stoi(day_checkout);
         bool flag1 = false , help_flag_month = false;
-        string month_checkin = checkin_date.substr(3,4);
+        string month_checkin = checkin_date.substr(3,2);
         int int_month_checkin = std::stoi(month_checkin);
-        string month_checkout = checkout_date.substr(3,4);
+        string month_checkout = checkout_date.substr(3,2);
         int int_month_checkout = std::stoi(month_checkout);
         bool flag2 = false;
         if(int_month_checkin < int_month_checkout)
@@ -395,9 +405,9 @@
             flag2 = true;
             flag1 = true;
         }
-        string year_checkin = checkin_date.substr(6,9);
+        string year_checkin = checkin_date.substr(6,4);
         int int_year_checkin = std::stoi(year_checkin);
-        string year_checkout = checkout_date.substr(6,9);
+        string year_checkout = checkout_date.substr(6,4);
         int int_year_checkout = std::stoi(year_checkout);
         bool flag3 = false;
         if(int_year_checkin <= int_year_checkout)
@@ -655,7 +665,7 @@
     }
     void SWITCH::Print_Data(bool *printInfo_flag , CustomerCard *cardObj , int *p_Total_PAY ,
     std::vector<Hotel>::iterator h_selected , std::vector<Customer>& customer,
-    string *p_checkinDate ,string *p_checkOutDate , int *p_singleRooms , int *p_doubleRooms , int *p_tripleRooms , string currID)
+    string *p_checkinDate ,string *p_checkOutDate , int *p_singleRooms , int *p_doubleRooms , int *p_tripleRooms , string currID , std::unordered_map<string , Customer>& customerMap)
     {
         if(*printInfo_flag == true)
         {
@@ -667,14 +677,9 @@
             h_selected->Print();
             std::cout << "\t\t\t------Your Info------ " << std::endl;
             std::cout << "-----------------------------------------------" << std::endl;
-            auto c = customer.begin();
-            for(c  = customer.begin() ; c!= customer.end() ; ++c){
-                if(c->getID() == currID){
-                    c->Print();
-                    std::cout << "-----------------------------------------------" << std::endl;
-                    std::cout << "-----------------------------------------------" << std::endl;
-                }
-            }
+            auto it = customerMap.find(currID);
+            Customer temp = it->second;
+            temp.Print();
             std::cout <<"Check-in date: " << *p_checkinDate << "\t" << "Check-out date: " << *p_checkOutDate  << std::endl;
             std::cout <<"---------> ONE BEDROOM ROOMS: " << *p_singleRooms << std::endl;
             std::cout <<"---------> TWO BEDROOM ROOMS: " << *p_doubleRooms << std::endl;
