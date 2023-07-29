@@ -46,7 +46,7 @@ object-oriented C++ programming project
       	    ---> id and password are crypter with Caesar Cypher
      >>>>>> Fixed some bugs: ---- Forgot to read in the password map the data from the records file (now the id is unique )
 
-     			     ---- Fixed the modify customer data (it was reading the data twice in a row when you wanted to modify your data), now it is reading only once.
+     			---- Fixed the modify customer data (it was reading the data twice in a row when you wanted to modify your data), now it is reading only once.
 
                              ---- Fixed a segmentation fault from the map iterator when you were removing your data.
 
@@ -56,11 +56,9 @@ object-oriented C++ programming project
   	>>>> FEEL FREE TO INSPIRE IF YOU WANT
 	
 	
-	 >>>> RUN WITH (in console) : 1) make clean 
-  
-  				      2) make
+	 >>>> RUN WITH (in console) : 1) make
 				
-				      3) ./bin/main
+				      2) ./bin/main
 
 
 
