@@ -56,9 +56,11 @@ object-oriented C++ programming project
   	>>>> FEEL FREE TO INSPIRE IF YOU WANT
 	
 	
-	 >>>> RUN WITH (in console) : 1) make
+	 >>>> RUN WITH (in console) : 1) make clean 
+  
+  				      2) make
 				
-				      2) ./bin/main
+				      3) ./bin/main
 
 
 
